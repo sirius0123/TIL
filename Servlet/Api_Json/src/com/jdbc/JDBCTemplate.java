@@ -13,15 +13,15 @@ public class JDBCTemplate {
 	
 		try {
 			//드라이버 연결
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			//드라이버 연결실패
 			e.printStackTrace();
 		}
 		
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String id="scott";
-		String pw="tiger";
+		String url = "jdbc:mariadb:@localhost:3306:csv_db";
+		String id="root";
+		String pw="1234";
 		
 		Connection con = null;
 		
